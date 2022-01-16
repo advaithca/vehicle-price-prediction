@@ -15,6 +15,9 @@ car_details = pd.read_csv(r"CAR_DETAILS_FROM_CAR_DEKHO_C.csv",na_values='?')
 car_details.dropna()
 
 st.write("""
+# Vehicle-Price-Predict-inator !!!
+""")
+st.write("""
 # Dataset Used
 """)
 
