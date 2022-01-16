@@ -52,10 +52,6 @@ st.write("""
 ### It can be seen that Linear Model doesn't fit this graph well
 """)
 
-st.write("""
-********
-""")
-
 features = ["km_driven","year"]
 
 x = np.array(train_details.loc[:,features])
