@@ -77,7 +77,9 @@ st.write("""
 new_features = ['km_driven','year']
 new_x = np.array(test_details.loc[:,new_features])
 
-y_pred = linmod.predict(new_x)
+new_x_poly = poly.fit_transform(new_x)
+
+y_pred = linmod.predict(new_x_poly)
 
 data = []
 j = 0
