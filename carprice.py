@@ -11,7 +11,7 @@ from sklearn.linear_model import LinearRegression
 import altair as alt
 from sklearn.preprocessing import PolynomialFeatures
 
-car_details = pd.read_csv(r"D:\Documents\Python\Fun\CAR_DETAILS_FROM_CAR_DEKHO_C.csv",na_values='?')
+car_details = pd.read_csv(r"CAR_DETAILS_FROM_CAR_DEKHO_C.csv",na_values='?')
 car_details.dropna()
 
 st.write("""
