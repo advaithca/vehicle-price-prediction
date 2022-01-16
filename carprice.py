@@ -74,33 +74,33 @@ st.write("""
 *******
 """)
 
-# new_features = ['km_driven']
-# new_x = np.array(test_details.loc[:,new_features])
+new_features = ['km_driven','year']
+new_x = np.array(test_details.loc[:,new_features])
 
-# y_pred = linmod.predict(new_x)
+y_pred = linmod.predict(new_x)
 
-# data = []
-# j = 0
+data = []
+j = 0
 
-# for i in range(len(test_details)):
-#     data.append([test_details.loc[i+3472,'name'],y_pred[j],test_details.loc[i+3472,'year']])
-#     j += 1
+for i in range(len(test_details)):
+    data.append([test_details.loc[i+3472,'name'],y_pred[j],test_details.loc[i+3472,'year']])
+    j += 1
 
-# predictions = pd.DataFrame(data, columns=['Vehicle_Name','Predicted_price','Year'])
+predictions = pd.DataFrame(data, columns=['Vehicle_Name','Predicted_price','Year'])
 
-# st.write("""
-# # Predicted prices
+st.write("""
+# Predicted prices
 
-# ####
-# """)
-# predictions
+####
+""")
+predictions
 
-# st.download_button(
-#     label='Download as csv',
-#     data=predictions.to_csv().encode('utf-8'),
-#     file_name='carprice.csv',mime='text/csv'
-# )
+st.download_button(
+    label='Download as csv',
+    data=predictions.to_csv().encode('utf-8'),
+    file_name='carprice.csv',mime='text/csv'
+)
 
-# st.write("""
-# ######
-# """)
+st.write("""
+######
+""")
