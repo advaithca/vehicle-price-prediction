@@ -17,6 +17,11 @@ car_details.dropna()
 st.write("""
 # Vehicle-Price-Predict-inator !!!
 """)
+
+st.write("""
+*******
+""")
+
 st.write("""
 # Dataset Used
 """)
@@ -33,6 +38,10 @@ g = alt.Chart(train_details).mark_point().encode(
 reg = g.transform_regression('year','selling_price').mark_line(color="#FFAA00")
 
 final_plot = (g + reg).interactive()
+
+st.write("""
+*******
+""")
 
 st.write("""
 # A Plot of Kilometres driven vs Selling Price
@@ -66,7 +75,7 @@ Coefficient of determination :
 """,r_sq)
 
 st.write("""
-######
+*******
 """)
 
 # new_features = ['km_driven']
