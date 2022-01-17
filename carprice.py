@@ -89,17 +89,17 @@ st.write("""
 Coefficient of determination when using a 3 degree curve : 
 """,r_sq)
 
-g3 = alt.Chart(train_details).mark_point().encode(
-    alt.X('km_driven:Q',scale=alt.Scale(zero=False)),
-    y = 'selling_price',
-    tooltip = ['name','selling_price','year'],
-)
+# g3 = alt.Chart(train_details).mark_point().encode(
+#     alt.X('km_driven:Q',scale=alt.Scale(zero=False)),
+#     y = 'selling_price',
+#     tooltip = ['name','selling_price','year'],
+# )
 
-reg3 = g3.transform_regression('km_driven','selling_price',method='poly'
-    ).mark_line(color="#FFAA00")
+# reg3 = g3.transform_regression('km_driven','selling_price',method='poly'
+#     ).mark_line(color="#FFAA00")
 
-final_plot3 = (g3 + reg3).interactive()
-st.altair_chart(final_plot3)
+# final_plot3 = (g3 + reg3).interactive()
+# st.altair_chart(final_plot3)
 
 st.write("""
 *******
