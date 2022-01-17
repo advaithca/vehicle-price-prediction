@@ -63,18 +63,25 @@ final_plot2 = (g2 + reg2).interactive()
 
 st.altair_chart(final_plot2)
 
+features = ["km_driven","year"]
+
+x = np.array(train_details.loc[:,features])
+y = np.array(train_details['selling_price'])
+
+linmodl = LinearRegression().fit(x,y)
+r_sql = linmodl.score(x,y)
+
 st.write("""
 ### It can be seen that Linear Model doesn't fit this graph well
 """)
 
 st.write("""
+Coefficient of determination when using a straight line : 
+""",r_sql)
+
+st.write("""
 ### However, a polynomial of degree 3 fits it better
 """)
-
-features = ["km_driven","year"]
-
-x = np.array(train_details.loc[:,features])
-y = np.array(train_details['selling_price'])
 
 poly = PolynomialFeatures(degree=3)
 x_poly = poly.fit_transform(x)
