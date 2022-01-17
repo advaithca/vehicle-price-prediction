@@ -15,7 +15,9 @@ car_details = pd.read_csv(r"CAR_DETAILS_FROM_CAR_DEKHO_C.csv",na_values='?')
 car_details.dropna()
 
 st.write("""
-# Vehicle-Price-Predict-inator !!!
+# Car Price Prediction
+
+### Predicts price of used cars from km driven and model year
 """)
 
 st.write("""
